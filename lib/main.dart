@@ -1,56 +1,80 @@
-import 'package:flutter/material.dart'; //mengambil library flutter
+import 'package:flutter/material.dart';
 
-void main() {
-  var app = new MyApp();
-  runApp(app);
-} //fungsi utama yang akan menjadi entri point dari aplikasi yang dibuat
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner:
           false, //menghilangkan tulisan debug pada pojok kanan atas
       title: 'SDGs8',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Share Lok.er'), //widget untuk membuat teks
-        ), //widget untuk membuat appbar
-        drawer: Drawer(
-          child: Text(''), //widget untuk membuat teks
-        ), //widget untuk membuat tab menu pojok kiri atas
-        body: Column(
-          children: [
-            Row(
-              children: [
-                Text(
-                  'Nama Anggota Kelompok 8',
-                  style: TextStyle(
-                      fontSize: 20), //widget untuk mengatur style text
-                ), //widget untuk membuat teks
-              ],
-            ), //widget untuk membuat baris
-            Row(
-              children: [
-                Text(
-                    '- Ahmad Lukman Maulana 182410103015 '), //widget untuk membuat teks
-              ],
-            ), //widget untuk membuat baris
-            Row(
-              children: [
-                Text(
-                    '- Muhammad Riski Fadista 182410103032'), //widget untuk membuat teks
-              ],
-            ), //widget untuk membuat baris
-            Row(
-              children: [
-                Text(
-                    '- Atiiqah Nabilah Imtiyaz 182410103055'), //widget untuk membuat teks
-              ],
-            ), //widget untuk membuat baris pada body
-          ],
-        ), //widget untuk membuat kolom pada body
-      ), //widget untuk struktur dasar material design
-    ); //widget yang membungkus beberapa widget yang menggunakan tema material design
+      home: MyHomePage(title: 'Share Lok.er'),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.only(left: 20.0, right: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Masukan Nama Lengkap Anda",
+                      icon: Icon(Icons.account_circle),
+                      labelText: 'Nama',
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 20.0),
+                  ),
+                  //Password TextField
+                  TextField(
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.lock),
+                      labelText: 'Password',
+                    ),
+                    obscureText: true,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 20.0),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 40.0),
+                          child: RaisedButton(
+                            onPressed: () {},
+                            child: Text('Login'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

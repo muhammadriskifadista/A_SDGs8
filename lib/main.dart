@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  'Nama Anggota Kelompok',
+                  'Nama Anggota Kelompok 8',
                   style: TextStyle(
                       fontSize: 20), //widget untuk mengatur style text
                 ), //widget untuk membuat teks

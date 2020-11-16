@@ -7,14 +7,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  /** alt shif f */
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:
-          false, //menghilangkan tulisan debug pada pojok kanan atas
-      title: 'SDGs8',
-      home: login(),
+      debugShowCheckedModeBanner: false,
+      title: 'A',
+      home: start(),
     );
   }
 }

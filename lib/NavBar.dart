@@ -16,13 +16,16 @@ class _NavBarState extends State<NavBar> {
     Pekerjaan(),
     Akun(),
   ];
+  Widget TopNavBar() {
+    return AppBar(
+      title: Text("Share Lok.er"),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Share Lok.er"),
-      ),
+      appBar: TopNavBar(),
       body: _screens[_activeScreenIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _activeScreenIndex,

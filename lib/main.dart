@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sdgs8/login.dart';
+import 'package:sdgs8/Start.dart';
+import 'package:sdgs8/Login.dart';
 
 void main() {
   var app = new MyApp();
@@ -7,13 +8,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  /** alt shif f */
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'A',
-      home: start(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Start(),
+        '/login': (context) => Login(),
+      },
     );
   }
 }

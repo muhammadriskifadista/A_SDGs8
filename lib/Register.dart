@@ -19,7 +19,6 @@ class Register extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  
                   TextField(
                     decoration: InputDecoration(
                       hintText: "Masukan Nama Lengkap Anda",
@@ -55,7 +54,7 @@ class Register extends StatelessWidget {
                   //no hp
                   TextField(
                     decoration: InputDecoration(
-                      hintText: "No handphone",
+                      hintText: "No Handphone",
                       icon: Icon(Icons.phone_android),
                       labelText: 'No. Hp',
                     ),
@@ -105,12 +104,11 @@ class Register extends StatelessWidget {
                           builder: (context) => Login(),
                         ),
                       );
-                     },
+                    },
                     child: Text(
                       "Sign in",
                       style: TextStyle(
-                                  color: Colors.blue,
-                                  fontWeight: FontWeight.bold),
+                          color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],

@@ -1,16 +1,9 @@
-# sdgs8
+# A_SDGs8
 
-A new Flutter project.
+Nama Anggota Kelompok
+- Ahmad Lukman Maulana 182410103015
+- Muhammad Riski Fadista 182410103032
+- Atiiqah Nabilah Imtiyaz 18241010305
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Share Lok.er adalah sebuah aplikasi mobile untuk memudahkan user dalam mencari lowongan pekerjaan. Dibuatanya aplikasi ini bertujuan untuk membantu mengurangi angka pengangguran di Indonesia, yang nantinya akan berdampak pada pertumbuhan ekonomi di Indonesia. Dengan aplikasi ini diharapkan bagi para pencari kerja yang kurang memperoleh informasi tentang lowongan pekerjaan disekitar mereka, agar bisa dengan mudah mengetahui dimana saja terdapat lowongan pekerjaan yang bisa mereka lamar. Juga melalui aplikasi ini mereka juga dapat mencari jenis pekerjaan sesuai dengan keahlian di bidang mereka masing-masing.

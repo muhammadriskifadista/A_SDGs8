@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdgs8/ListPelamar.dart';
 import 'package:sdgs8/MapScreen.dart';
 
 class Pekerjaan extends StatefulWidget {
@@ -30,17 +31,26 @@ class _PekerjaanState extends State<Pekerjaan> {
             'Pencabut Rumput',
             style: TextStyle(color: Colors.blue, fontSize: 20),
           ),
-          IconButton(
-            icon: new Icon(Icons.search, color: Colors.blue),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (ctx) {
-                    return MapScreen();
-                  },
-                ),
-              );
-            },
+          Container(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (ctx) {
+                      return MapScreen();
+                    },
+                  ),
+                );
+              },
+              child: Text(
+                'Lokasi Perusahaan',
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+            ),
           ),
           Container(
             height: 80,
@@ -55,12 +65,31 @@ class _PekerjaanState extends State<Pekerjaan> {
           ),
           RaisedButton(
             onPressed: () {},
-            child: Text('Kirim Lamaran'),
+            child: Text(
+              'Kirim Lamaran',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+              ),
+            ),
             color: Colors.blue,
           ),
           RaisedButton(
-            onPressed: () {},
-            child: Text('Para pengirim lamaran'),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (ctx) {
+                    return ListPelamar();
+                  },
+                ),
+              );
+            },
+            child: Text(
+              'Para pengirim lamaran',
+              style: TextStyle(
+                fontSize: 10,
+              ),
+            ),
             color: Colors.white,
           ),
         ],

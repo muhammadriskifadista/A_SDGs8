@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdgs8/ChooseCameraScreen.dart';
 
 class Akun extends StatelessWidget {
   @override
@@ -18,13 +19,31 @@ class Akun extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(right: 260.0),
                     width: 100,
-                    height: 50,
+                    height: 25,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100.0),
                       image: DecorationImage(
                         image: AssetImage('images/kerja.jpg'),
                         alignment: Alignment.topRight,
                         fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  FlatButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (ctx) {
+                            return ChooseCameraScreen();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Ubah Foto Profil",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -50,7 +69,7 @@ class Akun extends StatelessWidget {
                 bottom: 30,
               ),
               width: double.infinity,
-              height: 130,
+              height: 150,
               decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(
@@ -183,7 +202,7 @@ class Akun extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 107.0),
+              margin: EdgeInsets.only(top: 70.0),
               height: 70.0,
               width: double.infinity,
               child: Column(

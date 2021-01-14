@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdgs8/MapScreen.dart';
 import 'package:sdgs8/Start.dart';
 import 'package:sdgs8/Login.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => Start(),
         '/login': (context) => Login(),
+        '/map': (context) => MapScreen(),
       },
     );
   }

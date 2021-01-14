@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Akun extends StatelessWidget {
-  var rincianRumput = [
-    'Usia 18-25 tahun',
-    'Mampu bekerja seorang diri',
-    'Tekun, ulet, telaten',
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +29,7 @@ class Akun extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Permata Alenta',
+                    'Dista',
                     style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,

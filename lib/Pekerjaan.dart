@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdgs8/MapScreen.dart';
 
 class Pekerjaan extends StatefulWidget {
   @override
@@ -11,11 +12,7 @@ class _PekerjaanState extends State<Pekerjaan> {
     'Mampu bekerja seorang diri',
     'Tekun, ulet, telaten',
   ];
-  var rincianJalan = [
-    'Usia 18-30 tahun',
-    'Mampu bekerja secara tim',
-    'Kesabaran tinggi'
-  ];
+
   var rincianProgrammer = [
     'usia 12-25 tahun',
     'Mampu bekerja solo ataupun tim',
@@ -29,8 +26,22 @@ class _PekerjaanState extends State<Pekerjaan> {
       body: Column(
         children: [
           Padding(padding: EdgeInsets.all(10)),
-          Text('Pencabut Rumput',
-              style: TextStyle(color: Colors.blue, fontSize: 25)),
+          Text(
+            'Pencabut Rumput',
+            style: TextStyle(color: Colors.blue, fontSize: 20),
+          ),
+          IconButton(
+            icon: new Icon(Icons.search, color: Colors.blue),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (ctx) {
+                    return MapScreen();
+                  },
+                ),
+              );
+            },
+          ),
           Container(
             height: 80,
             child: ListView(
@@ -47,23 +58,10 @@ class _PekerjaanState extends State<Pekerjaan> {
             child: Text('Kirim Lamaran'),
             color: Colors.blue,
           ),
-          Padding(padding: EdgeInsets.all(10)),
-          Text('Programer', style: TextStyle(color: Colors.blue, fontSize: 25)),
-          Container(
-            height: 80,
-            child: ListView(
-              children: rincianProgrammer.map((e) {
-                return Padding(
-                  child: Text(e),
-                  padding: EdgeInsets.only(top: 5.0, left: 20.0),
-                );
-              }).toList(),
-            ),
-          ),
           RaisedButton(
             onPressed: () {},
-            child: Text('Kirim Lamaran'),
-            color: Colors.blue,
+            child: Text('Para pengirim lamaran'),
+            color: Colors.white,
           ),
         ],
       ),

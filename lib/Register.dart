@@ -32,7 +32,7 @@ class Register extends StatelessWidget {
                   //email
                   TextField(
                     decoration: InputDecoration(
-                      hintText: "Masukan email anda",
+                      hintText: "contoh@gmail.com",
                       icon: Icon(Icons.mail_outline),
                       labelText: 'Email',
                     ),
